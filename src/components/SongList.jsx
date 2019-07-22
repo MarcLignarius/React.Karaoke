@@ -11,11 +11,7 @@ const SongList = ({ dispatch, songList }) => {
         let song = songList[songId];
         return <li key = {songId} onClick = {() => {
           if (song.arrayPosition > 0){
-            action = {
-              type: 'RESTART_SONG',
-              currentSongId: songId
-            };
-            dispatch(action);
+            dispatch(restartSong(id));
           }
           action = {
             type: 'CHANGE_SONG',

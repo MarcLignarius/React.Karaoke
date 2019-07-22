@@ -1,4 +1,5 @@
 import * as types from "./../constants/ActionTypes";
+import v4 from 'uuid/v4';
 
 export const nextLyric = (currentSongId) => ({
   type: types.NEXT_LYRIC,

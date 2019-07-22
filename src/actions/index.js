@@ -19,6 +19,7 @@ export const changeSong = (newSelectedSongId) => ({
 export function fetchSongId(title) {
   return function (dispatch) {
     const localSongId = v4();
+    dispatch(requestSong(title, localSongId));
     title = title.replace(' ', '_');
     return fetch('http://api.musixmatch.com/ws/1.1/track.search?&q_track=' + title + '&page_size=1&s_track_rating=desc&apikey=3ee59ea1f59a0f43f3bea2522ec6cd51').then(
       response => response.json(),

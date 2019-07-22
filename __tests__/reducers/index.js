@@ -15,7 +15,7 @@ describe('Karaoke App', () => {
     });
 
     it('Should update currently-displayed lyric of song', () => {
-      expect(lyricChangeReducer(initialState.songsById, { type: 'NEXT_LYRIC', currentSongId: 2 })[2].arrayPosition).toEqual(initialState.songsById[2].arrayPosition + 1);
+      expect(lyricChangeReducer(initialState.songsById, actions.nextLyric(2))[2].arrayPosition).toEqual(initialState.songsById[2].arrayPosition + 1);
     });
 
     it('Should restart song', () => {

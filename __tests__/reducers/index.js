@@ -1,6 +1,7 @@
+import * as actions from './../../src/actions';
 import constants from "./../../src/constants";
-import songChangeReducer from './../../src/reducers/songChangeReducer';
 import lyricChangeReducer from './../../src/reducers/lyricChangeReducer';
+import songChangeReducer from './../../src/reducers/songChangeReducer';
 import rootReducer from './../../src/reducers/';
 import { createStore } from 'redux';
 

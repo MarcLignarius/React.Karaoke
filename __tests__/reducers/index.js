@@ -29,7 +29,7 @@ describe('Karaoke App', () => {
     });
 
     it('Should change selectedSong.', () => {
-      expect(songChangeReducer(initialState, actions.changeSong(2))).toEqual(1);
+      expect(songChangeReducer(initialState, actions.changeSong(2))).toEqual(2);
     });
   });
 
